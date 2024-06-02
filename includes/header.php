@@ -1,3 +1,25 @@
+<?php
+// Obtener el contenido actual del HTML
+$html_content = file_get_contents('pagina.html');
+
+// Calcular el hash del contenido actual
+$current_hash = md5($html_content);
+
+// Obtener el hash almacenado anteriormente (si lo hay)
+$stored_hash = isset($_SESSION['html_hash']) ? $_SESSION['html_hash'] : '';
+
+// Comparar los hashes
+if ($current_hash !== $stored_hash) {
+    // Eliminar el caché si hay cambios
+    header("Cache-Control: no-cache, must-revalidate");
+    header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+
+    // Almacenar el nuevo hash
+    $_SESSION['html_hash'] = $current_hash;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
