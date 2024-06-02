@@ -1,6 +1,6 @@
 <?php
 // Obtener el contenido actual del HTML
-$html_content = file_get_contents('pagina.html');
+$html_content = file_get_contents('index.php');
 
 // Calcular el hash del contenido actual
 $current_hash = md5($html_content);
