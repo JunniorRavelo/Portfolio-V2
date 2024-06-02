@@ -60,7 +60,8 @@
           <li class="nav-item">
             <button type="button" class="btn btn-outline-light btn-navbar" data-toggle="modal" data-target="#exampleModal">Contact</button>
           </li>
-          <li class="nav-item">
+
+          <li class="nav-item" style="display: none;">
             <button type="button" class="btn btn-outline-light btn-navbar btn-navbar-systemColor">
               <i class="bi bi-moon"></i>
             </button>
