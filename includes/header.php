@@ -47,7 +47,7 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a href="../portfolio_v2" class="btn btn-outline-light btn-navbar">About</a>
+            <a href="index" class="btn btn-outline-light btn-navbar">About</a>
           </li>
 
 
