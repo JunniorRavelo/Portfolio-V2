@@ -1,0 +1,311 @@
+/* Estilos globales */
+body {
+  background-color: #0A0A0A;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animaciones */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Tipografías y textos */
+h1 {
+  font-size: 2.5rem;
+  font-family: "Average Sans", cursive;
+  color: white;
+  font-weight: bold;
+  overflow: hidden; /* Ensures the text is clipped */
+  white-space: nowrap; /* Keeps the text on a single line */
+  border-right: 0.15em solid white; /* The cursor */
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+.cursor-hidden {
+  border-right: none;
+}
+
+.seccion-titulo {
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: "Average Sans", sans-serif;
+}
+
+.seccion-descripcion, .seccion-texto {
+  font-size: 1.2rem;
+}
+
+.seccion-descripcion {
+  color: #584e4e;
+}
+
+.texto-blanco {
+  color: white;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  border-bottom: 1px solid rgb(250, 250, 250);
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20%;
+}
+
+.btn-navbar {
+  margin: 3px 10px;
+  border-color: transparent;
+}
+
+.btn-navbar-systemColor {
+  position: absolute;
+  right: 20%;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .nav-item {
+    margin: 0 0px;
+  }
+  .navbar-collapse {
+    padding-left: 1%;
+  }
+  .btn-navbar {
+    margin: 1px 3px;
+  }
+  .btn-navbar-systemColor {
+    right: 1%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+/* Sección Hero */
+.hero {
+  background-color: transparent;
+  min-height: 450px;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.hero-content {
+  padding: 0 20%;
+}
+
+.hero-imagen-desarrollador {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.text-container {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  color: #615151;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .text-container {
+    margin-left: 0;
+  }
+}
+
+/* Sección Sobre mi */
+.sobre-mi {
+  height: auto;
+  padding: 0 20%;
+}
+
+.sobre-mi .contenedor {
+  max-width: 800px;
+  text-align: center;
+}
+
+.sobre-mi .contenedor .seccion-texto {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .sobre-mi {
+    padding: 0 1rem;
+  }
+}
+
+/* Sección Proyectos */
+.proyectos-recientes {
+  padding: 6%;
+}
+
+.proyectos-recientes img {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.proyectos-contenedor {
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+.btn-info{
+  background-color: #007bff;
+  border-color: #007bff;
+
+}
+
+.overlay {
+  transition: all 0.2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.proyecto {
+  position: relative;
+}
+
+.proyecto:hover img {
+  opacity: 0.2;
+}
+
+.proyecto:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .iconos-contenedor {
+  display: flex;
+}
+
+.overlay i {
+  color: black;
+  font-size: 60px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .overlay i {
+    font-size: 40px;
+  }
+}
+
+/* Pie de página (footer) */
+footer {
+  min-height: auto;
+}
+
+.iconos-redes-sociales {
+  border: 50px;
+}
+
+.iconos-redes-sociales a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover {
+  background-color: white;
+  border: 2px solid white;
+}
+
+.iconos-redes-sociales a:hover i {
+  color: black;
+}
+
+.derechos-de-autor {
+  font-size: 15px;
+  color: #aeaeae;
+  padding: 20px;
+}
+
+/* Estilos responsivos adicionales */
+@media screen and (max-width: 800px) {
+  .testimonio-imagen {
+    height: 120px;
+    width: 120px;
+  }
+
+  .testimonio-texto {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero-inferior-imagen {
+    max-width: 600px;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .contenedor {
+    padding: 0 20px;
+  }
+
+  .seccion-texto {
+    font-size: 14px;
+  }
+}
