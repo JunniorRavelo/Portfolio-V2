@@ -1,25 +1,3 @@
-<?php
-// Obtener el contenido actual del HTML
-$html_content = file_get_contents('index.php');
-
-// Calcular el hash del contenido actual
-$current_hash = md5($html_content);
-
-// Obtener el hash almacenado anteriormente (si lo hay)
-$stored_hash = isset($_SESSION['html_hash']) ? $_SESSION['html_hash'] : '';
-
-// Comparar los hashes
-if ($current_hash !== $stored_hash) {
-    // Eliminar el caché si hay cambios
-    header("Cache-Control: no-cache, must-revalidate");
-    header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
-
-    // Almacenar el nuevo hash
-    $_SESSION['html_hash'] = $current_hash;
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -53,7 +31,7 @@ if ($current_hash !== $stored_hash) {
   <!-- Iconos de Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <!-- CSS -->
-  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=<?php echo filemtime('style.css'); ?>">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
