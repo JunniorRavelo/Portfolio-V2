@@ -1,4 +1,7 @@
-<?php include("includes/header.php") ?>
+<?php
+  include("includes/header.php");
+  include 'microservice/notificacion_telegram.php';
+?>
 
 <!-- Proyectos -->
 <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
