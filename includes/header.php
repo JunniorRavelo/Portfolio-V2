@@ -89,7 +89,7 @@
             <label for="basic-url" class="form-label">Email</label>
             <div class="input-group">
               <!-- Agrega el valor del correo electrónico directamente como el valor del atributo 'value' -->
-              <input type="text" class="form-control" id="email" aria-describedby="basic-addon3" value="example@example.com" disabled>
+              <input type="text" class="form-control" id="email" aria-describedby="basic-addon3" value="Jrsantiagoravelo@gmail.com" disabled>
               <button type="button" class="btn btn-outline-secondary" id="copyButton">
                 <i class="bi bi-clipboard"></i>
               </button>

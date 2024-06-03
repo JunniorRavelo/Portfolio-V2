@@ -1,6 +1,6 @@
 <?php
   include("includes/header.php");
-  include 'microservice/notificacion_telegram.php';
+  /*include 'microservice/notificacion_telegram.php';*/
 ?>
 
 <!-- Proyectos -->

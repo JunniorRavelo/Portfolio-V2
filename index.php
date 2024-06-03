@@ -1,10 +1,7 @@
 <?php
+  /*include("microservices/notificacion_telegram.php");*/
   include("includes/header.php");
-  include 'microservice/notificacion_telegram.php';
 ?>
-
-
-
 
 <!-- Seccion Hero -->
 <section class="hero align-items-stretch">
