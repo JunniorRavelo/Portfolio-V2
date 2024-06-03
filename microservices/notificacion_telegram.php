@@ -1,6 +1,6 @@
 <?php
 
-/* Este acceso de token es un ejemplo lo cuales no sirve. */
+//Este acceso de token es un ejemplo lo cuales no sirve.
 
 // Define el token de acceso de tu bot de Telegram
 $botToken = '7008617537:AAGw__qro5UE_eMSf1zQ-EI2WGcqGrasNUc'; // Reemplaza con tu token de acceso
