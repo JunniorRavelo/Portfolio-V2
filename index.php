@@ -1,7 +1,12 @@
 <?php
-  /*include("microservices/notificacion_telegram.php");*/
+/*include("microservices/notificacion_telegram.php");*/
   include("includes/header.php");
 ?>
+
+<br><br><br>
+<div class="alert alert-danger" role="alert">
+  Estamos en mantenimiento, disculpa las molestias.
+</div>
 
 <!-- Seccion Hero -->
 <section class="hero align-items-stretch">
@@ -13,6 +18,8 @@
     </div>
   </div>
 </section>
+
+
 
 <script>
   //Funcion del cursor en el hero h1
