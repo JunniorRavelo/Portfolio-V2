@@ -57,18 +57,20 @@
 
 <br>
 
+
+
 <!--inconos de redes sociales-->
 <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
-  <a href="https://wa.me/573202947007" target="_blank" rel="noopener noreferrer">
+  <a href="<?= $whatsapp ?>" target="_blank" rel="noopener noreferrer">
     <i class="bi bi-whatsapp"></i>
   </a>
-  <a href="https://github.com/JunniorRavelo" target="_blank" rel="noopener noreferrer">
+  <a href="<?= $github ?>" target="_blank" rel="noopener noreferrer">
     <i class="bi bi-github"></i>
   </a>
-  <a href="https://www.linkedin.com/in/jrravelo/" target="_blank" rel="noopener noreferrer">
+  <a href="<?= $linkedin ?>" target="_blank" rel="noopener noreferrer">
     <i class="bi bi-linkedin"></i>
   </a>
-  <a href="mailto:dev.jrsantiagoravelo@gmail.com" target="_blank" rel="noopener noreferrer">
+  <a href="<?= $mailto ?>" target="_blank" rel="noopener noreferrer">
     <i class="bi bi-envelope"></i>
   </a>
 </div>

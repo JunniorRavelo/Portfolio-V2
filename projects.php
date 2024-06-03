@@ -17,7 +17,7 @@
         <div class="row">
 
             <!-- Componenten proyecto -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" style="display: none;">
                 <div class="proyecto">
                     <img src="https://news.sophos.com/wp-content/uploads/2020/07/moodle-logo.png" alt="Proyecto 1">
                     <div class="overlay">
@@ -38,7 +38,7 @@
     </div>
 
 
-    <a href="https://github.com/JunniorRavelo?tab=repositories" target="_blank" rel="noopener noreferrer">
+    <a href="<?= $repositories_github ?>" target="_blank" rel="noopener noreferrer">
         <button type="button" class="btn btn-info">
             Ver en GitHub
             <i class="bi bi-arrow-right-circle-fill"></i>

@@ -1,3 +1,27 @@
+<?php
+
+//Se incluye el archivo con los links de contacto
+$json_file = 'public_link.json';
+
+if (file_exists($json_file) && is_readable($json_file)) {
+   
+    $json_string = file_get_contents($json_file);
+
+    $data = json_decode($json_string, true);
+
+    $whatsapp = $data['whatsapp'];
+    $github = $data['github'];
+    $linkedin = $data['linkedin'];
+    $email = $data['email'];
+    $mailto = $data['mailto'];
+    $repositories_github = $data['repositories_github'];
+
+} else {
+    echo "Error: El archivo $json_file no existe o no se puede leer.";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -89,7 +113,7 @@
             <label for="basic-url" class="form-label">Email</label>
             <div class="input-group">
               <!-- Agrega el valor del correo electrónico directamente como el valor del atributo 'value' -->
-              <input type="text" class="form-control" id="email" aria-describedby="basic-addon3" value="Jrsantiagoravelo@gmail.com" disabled>
+              <input type="text" class="form-control" id="email" aria-describedby="basic-addon3" value="<?= $email ?>" disabled>
               <button type="button" class="btn btn-outline-secondary" id="copyButton">
                 <i class="bi bi-clipboard"></i>
               </button>
