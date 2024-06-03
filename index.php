@@ -1,11 +1,11 @@
 <?php
-  include("microservices/notificacion_telegram.php");
-  include("includes/header.php");
+/*include("microservices/notificacion_telegram.php");*/
+include("includes/header.php");
 ?>
 
 <br><br><br>
 <div class="alert alert-danger" role="alert">
-  Estamos en mantenimiento, disculpa las molestias.
+  We are undergoing maintenance, sorry for the inconvenience.
 </div>
 
 <!-- Seccion Hero -->
@@ -14,7 +14,7 @@
     <img class="hero-imagen-desarrollador rounded-circle photo-perfil" src="resources/photo_perfil.jpeg" alt="Foto de Junnior Ravelo">
     <div class="text-container">
       <h1></h1>
-      <h2>Freelance especializado en el desarrollo de aplicaciones web y de escritorio.</h2>
+      <h2>Freelancer proficient in web and desktop development, semi-senior in network and database administration.</h2>
     </div>
   </div>
 </section>
@@ -49,9 +49,19 @@
 <section id="sobre-mi" class="sobre-mi seccion-oscura">
   <div class="contenedor">
     <h2 class="seccion-titulo" style="color: white;">About me</h2>
-    <p class="seccion-texto" style="color: white;">¡Hola! Soy un estudiante de ingeniería de sistemas (8vo semestre) con experiencia sólida en desarrollo web, automatización (RPA) y administración de redes. Mi compromiso con la calidad, respaldado por mi conocimiento de los estándares de ISO e IEEE, me ha permitido trabajar eficazmente en equipos empresariales, ofreciendo soluciones creativas y eficientes.
-      Me destaco por mi flexibilidad laboral como freelance, así como por mi capacidad para trabajar de manera autónoma y proactiva. Mis habilidades abarcan desde el desarrollo web con Laravel hasta la administración de bases de datos y redes, pasando por el diseño de arquitecturas empresariales y la implementación de automatizaciones con RPA.
-      En mi tiempo libre, me apasiona el análisis de datos, el desarrollo de bots y la exploración de aplicaciones de Machine Learning. Si buscas un profesional comprometido, creativo y orientado a resultados en el campo de la ingeniería de sistemas, ¡estoy aquí para ayudarte a alcanzar tus objetivos tecnológicos!</p>
+    <p class="seccion-texto" style="color: white;">
+
+      Hello! I am a Systems Engineering student (8th semester) with solid experience in web development,
+      automation (RPA), and network administration. My commitment to quality, backed by my knowledge of ISO
+      and IEEE standards, has enabled me to work effectively in corporate teams, providing creative and efficient
+      solutions. I excel in flexible freelance work as well as in my ability to work autonomously and proactively.
+      My skills range from web development with Laravel to database and network administration, encompassing
+      enterprise architecture design and RPA implementation. In my free time, I am passionate about data analysis,
+      bot development, and exploring Machine Learning applications. If you are looking for a committed, creative,
+      and results-oriented professional in the field of systems engineering, I am here to help you achieve your
+      technological goals!
+
+    </p>
   </div>
 </section>
 
