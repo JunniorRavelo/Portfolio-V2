@@ -1,0 +1,11 @@
+Tabla links del portafolio:
+CREATE TABLE `u216741521_portfliov2`.`links` (
+    `ID` INT NOT NULL AUTO_INCREMENT,
+    `Date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `Status` ENUM('Create', 'Update', 'Delete') NOT NULL DEFAULT 'Create',
+    `GitHub` TEXT NOT NULL,
+    `WhatsApp` TEXT NOT NULL,
+    `Portfolio` TEXT NOT NULL,
+    `Linkedin` TEXT NOT NULL,
+    PRIMARY KEY (`ID`)
+) ENGINE = InnoDB COMMENT = 'Tabla de registros de links del portfolio.';

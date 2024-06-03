@@ -1,8 +1,9 @@
 <!-- Pie de pagina (footer) -->
 <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
-  
 
-  <div class="derechos-de-autor">&#169; 2024 • Jr Santiago Ravelo — All rights reserved.</div>
+  <!-- PHP: Mostrar año actual -->
+  <div class="derechos-de-autor">&#169; <?php $year = date('Y');echo "$year"; ?> • Jr Santiago Ravelo — All rights reserved.</div>
+  
 </footer>
 
 

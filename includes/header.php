@@ -46,26 +46,28 @@
       <div class="navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
 
+          <!-- Boton de inicio -->
           <li class="nav-item">
             <a href="index" class="btn btn-outline-light btn-navbar">About</a>
           </li>
 
-
-
-
+          <!-- Boton de proyectos -->
           <li class="nav-item">
             <a href="projects" class="btn btn-outline-light btn-navbar">Projects</a>
           </li>
 
+          <!-- Boton de contacto -->
           <li class="nav-item">
-            <button type="button" class="btn btn-outline-light btn-navbar" data-toggle="modal" data-target="#exampleModal">Contact</button>
+            <button type="button" class="btn btn-outline-light btn-navbar" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button>
           </li>
 
+          <!-- Boton de cambio de tema -->
           <li class="nav-item" style="display: none;">
             <button type="button" class="btn btn-outline-light btn-navbar btn-navbar-systemColor">
               <i class="bi bi-moon"></i>
             </button>
           </li>
+
         </ul>
       </div>
     </div>
@@ -76,18 +78,92 @@
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Ejemplo modal</h1>
+          <h2 class="modal-title fs-5 text-light" id="exampleModalLabel">Contact me</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          ...
+        <div class="modal-body text-light">
+          <!-- Datos de contacto -->
+          <div class="mb-3">
+            <label for="basic-url" class="form-label">Email</label>
+            <div class="input-group">
+              <!-- Agrega el valor del correo electrónico directamente como el valor del atributo 'value' -->
+              <input type="text" class="form-control" id="email" aria-describedby="basic-addon3" value="example@example.com" disabled>
+              <button type="button" class="btn btn-outline-secondary" id="copyButton">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
   </div>
+
+
+  <!-- toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Notificacion</strong>
+        <small>Hace 1 segundo</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body text-light">
+        Copiado exitosamente
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Selecciona el botón de copia
+    var copyButton = document.getElementById('copyButton');
+    // Agrega un listener de clic al botón de copia
+    copyButton.addEventListener('click', function() {
+      // Selecciona el campo de entrada de texto
+      var emailField = document.getElementById('email');
+      // Habilita temporalmente el campo de entrada
+      emailField.removeAttribute('disabled');
+      // Selecciona el texto dentro del campo de entrada de texto
+      emailField.select();
+      // Copia el texto seleccionado al portapapeles
+      document.execCommand('copy');
+      // Deselecciona el texto
+      window.getSelection().removeAllRanges();
+      // Cambia el ícono del botón a copia exitosa
+      copyButton.innerHTML = '<i class="bi bi-clipboard-check"></i>';
+      // Restaura el estado del campo de entrada deshabilitado después de 1 segundo
+      setTimeout(function() {
+        // Deshabilita nuevamente el campo de entrada
+        emailField.setAttribute('disabled', 'disabled');
+        // Cambia el ícono del botón a copiar
+        copyButton.innerHTML = '<i class="bi bi-clipboard"></i>';
+      }, 1000);
+    });
+
+
+    // toast
+    document.addEventListener('DOMContentLoaded', function() {
+      // Selecciona el botón de copia
+      const toastTrigger = document.getElementById('copyButton');
+      // Selecciona el toast
+      const toastLiveExample = document.getElementById('liveToast');
+
+      // Verifica si ambos elementos existen
+      if (toastTrigger && toastLiveExample) {
+        // Crea una instancia del toast de Bootstrap con una duración de 2 segundos (2000 milisegundos)
+        const toastBootstrap = new bootstrap.Toast(toastLiveExample, {
+          delay: 2000 // Duración del toast en milisegundos
+        });
+
+        // Agrega un listener de clic al botón de copia
+        toastTrigger.addEventListener('click', () => {
+          // Muestra el toast
+          toastBootstrap.show();
+        });
+      }
+    });
+  </script>
