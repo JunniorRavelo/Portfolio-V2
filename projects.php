@@ -1,6 +1,6 @@
 <?php
   include("includes/header.php");
-  /*include 'microservice/notificacion_telegram.php';*/
+  include 'microservice/notificacion_telegram.php';
 ?>
 <br><br><br>
 <div class="alert alert-danger" role="alert">

@@ -42,8 +42,9 @@ $response = file_get_contents($telegramUrl);
 
 // Verifica si se envió correctamente
 if ($response === false) {
-    echo 'Error al enviar el mensaje.';
+    error_log('Error al enviar el mensaje.');
 } else {
-    echo 'Mensaje enviado correctamente.';
+    error_log('Mensaje enviado correctamente.');
 }
+
 ?>
