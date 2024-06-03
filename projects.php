@@ -2,7 +2,10 @@
   include("includes/header.php");
   /*include 'microservice/notificacion_telegram.php';*/
 ?>
-
+<br><br><br>
+<div class="alert alert-danger" role="alert">
+  Estamos en mantenimiento, disculpa las molestias.
+</div>
 <!-- Proyectos -->
 <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
     <h2 class="seccion-titulo" style="color: white;">Actividad reciente</h2>
