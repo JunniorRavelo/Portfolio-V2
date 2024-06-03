@@ -1,12 +1,13 @@
 <?php
 
+include("controller.php");
+
 //Este acceso de token es un ejemplo lo cuales no sirve.
 
-// Define el token de acceso de tu bot de Telegram
-$botToken = '7008617537:AAGw__qro5UE_eMSf1zQ-EI2WGcqGrasNUc'; // Reemplaza con tu token de acceso
+// Define $botToken en controller.php : El token de tu bot de Telegram
 
-// Define el ID de chat donde quieres enviar el mensaje
-$chatId = '6350696942'; // Reemplaza con tu chat ID
+// Define $chatId en controller.php : El ID de chat donde quieres enviar el mensaje
+
 
 // Obtiene el nombre del archivo actualmente en ejecución
 $currentPage = basename($_SERVER['SCRIPT_NAME']);

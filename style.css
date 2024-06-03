@@ -208,8 +208,8 @@ h1 {
 
 .proyecto {
   position: relative;
-  border: 2px solid white;
-  padding: 10%;
+  border: 1px solid rgb(129, 126, 126);
+  margin-top: 4%;
 }
 
 .proyecto:hover img {
